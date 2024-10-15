@@ -1,11 +1,1 @@
 # test-composite-actions
-
-#
-
-#
-
-#
-
-#
-
-#
