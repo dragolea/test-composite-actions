@@ -1,0 +1,19 @@
+name: Version and Release Workflow
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  version_release_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Use your composite action
+      - name: Release on PR merge
+        uses: dragolea/composite-actions@main # Replace with the branch or tag of your composite action
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
