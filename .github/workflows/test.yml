@@ -12,11 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
       # Use your composite action
       - name: Release on PR merge
         uses: dragolea/composite-actions@main # Replace with the branch or tag of your composite action
