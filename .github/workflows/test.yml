@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Use your composite action
       - name: Release on PR merge
-        uses: dragolea/composite-actions@main # Replace with the branch or tag of your composite action
+        # Here 'main' can replace with the branch or tag of your composite action
+        uses: dragolea/composite-actions@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
