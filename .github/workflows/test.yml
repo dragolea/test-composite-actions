@@ -19,10 +19,3 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: main
-# comment this
-
-#another comments
-
-#another comment
-
-#another one
