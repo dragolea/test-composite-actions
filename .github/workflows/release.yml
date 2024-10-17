@@ -11,7 +11,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  version_release_job:
+  release:
     runs-on: ubuntu-latest
 
     steps:

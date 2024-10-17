@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file.
 
 - Readme updated now
 
+### 🐛 Bug Fixes
+
+- Comment from 9.26
+
 ## [0.0.1] - 2024-10-15
 
 ### 🐛 Bug Fixes
