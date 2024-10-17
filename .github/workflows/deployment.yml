@@ -1,0 +1,36 @@
+name: Version and Release Workflow
+on:
+  pull_request:
+    branches:
+      - dev
+    types:
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  version_release_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bump version and create release
+        uses: dxfrontier/gh-action-deploy-cf@main
+        with:
+          # Common
+          CF_IAS_ORIGIN: 'origin'
+
+          # Development
+          CF_API_DEV: 'dev'
+          CF_ORG_DEV: 'dev'
+          CF_SPACE_DEV: 'dev'
+          CF_USERNAME_DEV: 'dev'
+          CF_PASSWORD_DEV: 'dev'
+
+          # Production
+          CF_API_PROD: 'prod'
+          CF_ORG_PROD: 'prod'
+          CF_SPACE_PROD: 'prod'
+          CF_USERNAME_PROD: 'prod'
+          CF_PASSWORD_PROD: 'prod'
